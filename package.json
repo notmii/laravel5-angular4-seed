@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build:dev": "webpack --config resources/assets/config/webpack.dev.js --progress --bail",
+    "build:dev": "webpack --config node_modules/laravel-mix/setup/webpack.config.js --watch --progress --bail",
     "build:prod": "webpack --config resources/assets/config/webpack.dev.js --progress --profile --bail"
   },
   "dependencies": {
@@ -13,19 +13,24 @@
     "@angular/platform-browser": "^4.0.2",
     "@angular/platform-browser-dynamic": "^4.0.2",
     "@angular/router": "^4.0.2",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.1",
+    "bootstrap": "4",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@types/node": "^8.0.20",
     "angular2-template-loader": "^0.6.2",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "laravel-mix": "^1.4.2",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
     "reflect-metadata": "^0.1.10",
     "ts-loader": "^2.3.2",
     "tslint": "^5.6.0",

@@ -11,7 +11,7 @@ module.exports = {
 
   output: {
     filename: "[name].js",
-    path: __dirname + "/../../../public/assets/[hash]",
+    path: __dirname + "/../../../public/assets/",
     publicPath: "/assets/[hash]/"
   },
 
@@ -55,11 +55,6 @@ module.exports = {
       name: ["app", "vendor", "polyfills"]
     }),
 
-    // new HtmlWebpackPlugin({
-    //   template: "src/index.html"
-    // }),
-
-    // Workaround for Angular-SystemJS-Webpack(2) WARNINGS
     new webpack.ContextReplacementPlugin(
       /angular(\\|\/)core(\\|\/)@angular/,
       'resources/assets'
